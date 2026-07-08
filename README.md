@@ -1,4 +1,4 @@
-# FARO
+# F.A.R.O
 
 Framework independente para Claude Code especializado em Application Security, Offensive Security, Defensive Security, Red Team, Purple Team, Cloud Security, Secure Software Engineering, Code Review, Threat Modeling, Malware Analysis, Reverse Engineering e Infrastructure Review.
 
