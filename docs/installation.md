@@ -19,7 +19,7 @@ O FARO é um plugin Claude Code autocontido: seu diretório raiz funciona tanto 
    ```
 3. Instalar o plugin a partir desse marketplace:
    ```
-   /plugin install faro@F.A.R.O
+   /plugin install F.A.R.O@F.A.R.O
    ```
 4. Ativar as mudanças na sessão atual:
    ```
