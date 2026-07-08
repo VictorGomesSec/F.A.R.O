@@ -2,9 +2,24 @@
 
 Todas as mudanças notáveis deste pacote são documentadas aqui.
 
+## [0.2.0] — 2026-07-08
+
+Renomeado de `ecc-security-pack` para **FARO** e empacotado como plugin Claude Code instalável.
+
+### Alterado
+
+- Nome do pacote/diretório: `ecc-security-pack` → `faro`. Todas as menções em prosa/títulos atualizadas para "FARO"; referências técnicas (nome de diretório, caminho de clone) atualizadas para `faro`.
+- README e `docs/architecture.md` deixam explícito que o FARO é um framework **independente**, não uma extensão do ECC — a semelhança de convenções (frontmatter de agente) é apenas por seguir um padrão comum ao ecossistema Claude Code.
+
+### Adicionado
+
+- `plugin.json` — manifesto mínimo do plugin (`name`, `description`, `version`).
+- `.claude-plugin/marketplace.json` — o próprio repositório funciona como marketplace de um único plugin (`faro`), usando `"source": "./"`.
+- `docs/installation.md` — seção "Instalação (como plugin — recomendado)" com os comandos exatos (`/plugin marketplace add`, `/plugin install faro@F.A.R.O`, `/reload-plugins`), mantendo a instalação manual (cópia para `.claude/agents/`/`.claude/commands/`) como alternativa.
+
 ## [0.1.0] — 2026-07-08
 
-Versão inicial do ecc-security-pack.
+Versão inicial do FARO.
 
 ### Adicionado
 

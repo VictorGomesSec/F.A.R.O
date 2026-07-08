@@ -1,6 +1,6 @@
 # Git Workflow (Security Lens)
 
-Convenções de fluxo de trabalho git com foco em segurança, fonte única para `../agents/devsecops-engineer.md` e `../agents/framework-maintainer.md` (aplicado ao próprio repositório do ecc-security-pack).
+Convenções de fluxo de trabalho git com foco em segurança, fonte única para `../agents/devsecops-engineer.md` e `../agents/framework-maintainer.md` (aplicado ao próprio repositório do FARO).
 
 ## Princípios
 

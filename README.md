@@ -1,13 +1,13 @@
-# ecc-security-pack
+# FARO
 
-Pacote de extensão do ECC (Everything Claude Code) especializado em Application Security, Offensive Security, Defensive Security, Red Team, Purple Team, Cloud Security, Secure Software Engineering, Code Review, Threat Modeling, Malware Analysis, Reverse Engineering e Infrastructure Review.
+Framework independente para Claude Code especializado em Application Security, Offensive Security, Defensive Security, Red Team, Purple Team, Cloud Security, Secure Software Engineering, Code Review, Threat Modeling, Malware Analysis, Reverse Engineering e Infrastructure Review.
 
-Não é um conjunto de prompts isolados — é um framework modular onde agentes, comandos, workflows, regras e templates se referenciam entre si, com uma fonte única de verdade para cada conceito reutilizável.
+Não é um conjunto de prompts isolados — é um framework modular onde agentes, comandos, workflows, regras e templates se referenciam entre si, com uma fonte única de verdade para cada conceito reutilizável. É instalável como plugin próprio (ver `docs/installation.md`) e não depende de nenhum outro plugin/framework para funcionar — a convenção de arquivo de agente (frontmatter `name`/`description`/`tools`) segue um padrão comum ao ecossistema Claude Code, mas o FARO não é uma extensão do ECC nem de qualquer outro pacote.
 
 ## Estrutura
 
 ```
-ecc-security-pack/
+faro/
   agents/       38 especialistas de segurança
   commands/     19 comandos (/review, /web-pentest, /threat-model, ...)
   workflows/    16 processos multi-agente de ponta a ponta
@@ -21,10 +21,10 @@ ecc-security-pack/
 
 ## Início Rápido
 
-1. Ver `docs/installation.md` para instalar/apontar seu ambiente ECC/Claude Code para este pacote.
-2. Não sabe por onde começar? Invoque `/review` ou fale diretamente com `agents/chief-security-architect.md` — ele identifica o tipo de alvo e seleciona os especialistas certos.
-3. Sabe exatamente o que quer avaliar? Vá direto ao comando especializado (`/web-pentest`, `/api-review`, `/cloud-review`, `/ad-review`, `/reverse`, `/malware`, etc. — lista completa em `commands/`).
-4. Para um cenário multi-domínio complexo, use `/planning` antes de executar.
+1. Instalar como plugin: `/plugin marketplace add /caminho/para/faro` → `/plugin install faro@F.A.R.O` → `/reload-plugins`. Ver `docs/installation.md` para detalhes e a alternativa sem empacotamento de plugin.
+2. Não sabe por onde começar? Invoque `/faro:review` ou fale diretamente com `@faro:chief-security-architect` — ele identifica o tipo de alvo e seleciona os especialistas certos.
+3. Sabe exatamente o que quer avaliar? Vá direto ao comando especializado (`/faro:web-pentest`, `/faro:api-review`, `/faro:cloud-review`, `/faro:ad-review`, `/faro:reverse`, `/faro:malware`, etc. — lista completa em `commands/`).
+4. Para um cenário multi-domínio complexo, use `/faro:planning` antes de executar.
 
 ## Orquestrador
 

@@ -1,6 +1,6 @@
 # Boas Práticas do Framework
 
-Estas práticas se aplicam a todo agente, comando, workflow, regra e template do ecc-security-pack — são o padrão de qualidade transversal citado no objetivo original do pacote.
+Estas práticas se aplicam a todo agente, comando, workflow, regra e template do FARO — são o padrão de qualidade transversal citado no objetivo original do pacote.
 
 ## Para Todo Agente
 

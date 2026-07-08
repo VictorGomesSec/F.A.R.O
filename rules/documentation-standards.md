@@ -1,6 +1,6 @@
 # Documentation Standards
 
-Padrões de documentação aplicados a todo o ecc-security-pack, fonte única para `../agents/technical-writer.md` e `../agents/report-writer.md`.
+Padrões de documentação aplicados a todo o FARO, fonte única para `../agents/technical-writer.md` e `../agents/report-writer.md`.
 
 ## Princípios
 

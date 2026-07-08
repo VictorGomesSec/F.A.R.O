@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Atualiza a documentação do próprio framework ecc-security-pack (README, docs/) ou a documentação de um achado/decisão, invocando `../agents/technical-writer.md`.
+Atualiza a documentação do próprio framework FARO (README, docs/) ou a documentação de um achado/decisão, invocando `../agents/technical-writer.md`.
 
 ## Parâmetros
 

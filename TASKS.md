@@ -1,4 +1,4 @@
-# TASKS — ecc-security-pack build checklist
+# TASKS — FARO build checklist
 
 Incremental build order: **agents → rules → commands → workflows → templates → examples → docs → root files → audit**.
 Check items off as each stage completes. See canonical file lists in each directory once populated.
@@ -49,10 +49,10 @@ Verified: 9/9 files present in `examples/`.
 
 Verified: 8/8 files present in `docs/`.
 
-## 8. Root
-- [ ] README.md
-- [ ] CHANGELOG.md (v0.1.0)
-- [ ] LICENSE (MIT)
+## 8. Root — DONE
+- [x] README.md
+- [x] CHANGELOG.md (v0.1.0)
+- [x] LICENSE (MIT)
 
 ## 9. Final audit — DONE
 - [x] Broken internal links check — 1 real bug found and fixed (`examples/kubernetes-cluster-analysis.md`: `../agents/secrets-management.md` → `../rules/secrets-management.md`). 2 false positives confirmed intentional (fictional examples in `agents/framework-maintainer.md` and `docs/creating-commands.md`).

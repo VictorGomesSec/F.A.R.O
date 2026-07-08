@@ -1,13 +1,13 @@
-# Arquitetura do ecc-security-pack
+# Arquitetura do FARO
 
 ## Visão Geral
 
-O ecc-security-pack estende o ECC (Everything Claude Code) com um conjunto modular de agentes, comandos, workflows, regras e templates especializados em segurança ofensiva/defensiva. A ideia central é que **nenhum componente duplica conhecimento de outro**: cada tipo de arquivo tem uma responsabilidade única e os demais o referenciam por link relativo em vez de copiar seu conteúdo.
+O FARO é um framework independente para Claude Code, com um conjunto modular de agentes, comandos, workflows, regras e templates especializados em segurança ofensiva/defensiva. A ideia central é que **nenhum componente duplica conhecimento de outro**: cada tipo de arquivo tem uma responsabilidade única e os demais o referenciam por link relativo em vez de copiar seu conteúdo.
 
 ## Estrutura de Diretórios
 
 ```
-ecc-security-pack/
+faro/
   agents/       38 especialistas — "quem faz o trabalho"
   rules/        14 regras reutilizáveis — "o padrão contra o qual comparar"
   commands/     19 comandos — "como invocar um especialista/workflow"
