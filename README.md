@@ -7,7 +7,7 @@ Não é um conjunto de prompts isolados — é um framework modular onde agentes
 ## Estrutura
 
 ```
-faro/
+F.A.R.O/
   agents/       38 especialistas de segurança
   commands/     19 comandos (/review, /web-pentest, /threat-model, ...)
   workflows/    16 processos multi-agente de ponta a ponta
@@ -21,9 +21,9 @@ faro/
 
 ## Início Rápido
 
-1. Instalar como plugin: `/plugin marketplace add /caminho/para/faro` → `/plugin install F.A.R.O@F.A.R.O` → `/reload-plugins`. Ver `docs/installation.md` para detalhes e a alternativa sem empacotamento de plugin.
-2. Não sabe por onde começar? Invoque `/faro:review` ou fale diretamente com `@faro:chief-security-architect` — ele identifica o tipo de alvo e seleciona os especialistas certos.
-3. Sabe exatamente o que quer avaliar? Vá direto ao comando especializado (`/faro:web-pentest`, `/faro:api-review`, `/faro:cloud-review`, `/faro:ad-review`, `/faro:reverse`, `/faro:malware`, etc. — lista completa em `commands/`).
+1. Instalar como plugin: `/plugin marketplace add /caminho/para/F.A.R.O` → `/plugin install F.A.R.O@F.A.R.O` → `/reload-plugins`. Ver `docs/installation.md` para detalhes e a alternativa sem empacotamento de plugin.
+2. Não sabe por onde começar? Invoque `/F.A.R.O:review` ou fale diretamente com `@F.A.R.O:chief-security-architect` — ele identifica o tipo de alvo e seleciona os especialistas certos.
+3. Sabe exatamente o que quer avaliar? Vá direto ao comando especializado (`/faro:web-pentest`, `/faro:api-review`, `/F.A.R.O:cloud-review`, `/F.A.R.O:ad-review`, `/F.A.R.O:reverse`, `/F.A.R.O:malware`, etc. — lista completa em `commands/`).
 4. Para um cenário multi-domínio complexo, use `/faro:planning` antes de executar.
 
 ## Orquestrador
