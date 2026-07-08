@@ -21,7 +21,7 @@ faro/
 
 ## Início Rápido
 
-1. Instalar como plugin: `/plugin marketplace add /caminho/para/faro` → `/plugin install faro@F.A.R.O` → `/reload-plugins`. Ver `docs/installation.md` para detalhes e a alternativa sem empacotamento de plugin.
+1. Instalar como plugin: `/plugin marketplace add /caminho/para/faro` → `/plugin install F.A.R.O@F.A.R.O` → `/reload-plugins`. Ver `docs/installation.md` para detalhes e a alternativa sem empacotamento de plugin.
 2. Não sabe por onde começar? Invoque `/faro:review` ou fale diretamente com `@faro:chief-security-architect` — ele identifica o tipo de alvo e seleciona os especialistas certos.
 3. Sabe exatamente o que quer avaliar? Vá direto ao comando especializado (`/faro:web-pentest`, `/faro:api-review`, `/faro:cloud-review`, `/faro:ad-review`, `/faro:reverse`, `/faro:malware`, etc. — lista completa em `commands/`).
 4. Para um cenário multi-domínio complexo, use `/faro:planning` antes de executar.
