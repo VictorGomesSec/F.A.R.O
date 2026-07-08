@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "faro",
+      "name": "F.A.R.O",
       "source": "./",
       "description": "Framework de agentes, comandos, workflows e regras especializados em segurança ofensiva/defensiva para Claude Code."
     }
