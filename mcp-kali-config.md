@@ -1,31 +1,27 @@
 # Guia de Instalação: Zebbern Kali MCP (via Docker)
 
-Como você decidiu usar o Zebbern Kali MCP, o F.A.R.O. agora delegará a execução das ferramentas de hacking (nmap, ffuf, nuclei, sqlmap, etc) para as **tools nativas (funções)** do servidor MCP em um container Docker, em vez de depender de comandos instáveis via bash.
+O F.A.R.O. agora integra oficialmente o Zebbern Kali MCP. Isso permite delegar a execução de ferramentas de segurança ofensiva (nmap, ffuf, sqlmap, etc.) diretamente para o servidor MCP em um container Docker, garantindo maior estabilidade e isolamento.
 
-## 1. Pré-requisitos
-Certifique-se de que o Docker está instalado e o serviço está ativo no seu Kali Linux:
+## 1. Subindo o Backend (Container Kali)
+Nós empacotamos as configurações necessárias dentro da pasta oficial de integrações do F.A.R.O.
+
+No seu terminal, navegue até a pasta da integração e inicie o container:
 ```bash
-sudo apt update
-sudo apt install docker.io
-sudo systemctl enable docker --now
-```
-
-## 2. Subindo o Backend (Container Kali)
-O `zebbern-kali-mcp` tem uma arquitetura dividida: as ferramentas rodam num container Docker (backend) e o Claude fala com um cliente Python (frontend).
-
-Primeiro, inicie o backend no seu terminal do Kali:
-```bash
-curl -sLO https://raw.githubusercontent.com/zebbern/zebbern-kali-mcp/main/docker-compose.yml
+cd integrations/zebbern-mcp
 docker compose up -d
 ```
+*(Se for a primeira vez, o Docker baixará a imagem, o que pode levar alguns minutos).*
 
-## 3. Adicionando o Servidor MCP no Claude Code
-O cliente MCP deste projeto é feito em Python e distribuído via `uvx`. Para conectar o Claude ao container que acabamos de ligar, rode no terminal:
+## 2. Adicionando o Servidor MCP no Claude Code
+O cliente MCP deste projeto é distribuído via `uvx`. Para conectar o Claude ao container que acabamos de ligar, rode no terminal:
 ```bash
 claude mcp add zebbern-kali-mcp -- uvx zebbern-kali-mcp
 ```
 
-## 4. Confirmação
+## 3. Resolução de Problemas
+Se você estiver em um ambiente corporativo (como atrás de um Zscaler ou Netskope) e o `docker compose up -d` falhar com um erro `403 Forbidden` no Docker Hub:
+1. Pause ou desative temporariamente seu agente SASE/SWG.
+2. Rode o `docker compose up -d` novamente (ou conecte-se a uma rede não corporativa, como 4G, apenas para o primeiro download).## 4. Confirmação
 Após reiniciar o seu `claude`, você pode conferir as novas capacidades digitando o comando dentro do prompt do Claude:
 ```bash
 /mcp list
