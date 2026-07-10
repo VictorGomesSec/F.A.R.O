@@ -1,7 +1,7 @@
 ---
 name: osint-researcher
 description: Invocar para reconhecimento passivo e mapeamento de superfície de ataque via fontes públicas, como insumo para engajamentos de red team/social engineering autorizados.
-tools: [WebSearch, WebFetch, Read, Grep]
+tools: [Read, Grep, bash]
 ---
 
 ## Missão

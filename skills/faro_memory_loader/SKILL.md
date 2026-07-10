@@ -12,7 +12,8 @@ Para evitar que o agente precise reexecutar Nmap ou ferramentas pesadas em uma n
 - Se o agente não tiver certeza sobre "quais eram as credenciais que achamos ontem?" ou "quais IPs estão no escopo?".
 
 ## Instruções de Execução
-1. Leia rapidamente o arquivo `.faro_memory/active_session.md` ou qualquer outro arquivo Markdown dentro da pasta `.faro_memory/`.
+1. **Sempre pergunte ao usuário qual é o alvo/projeto atual antes de ler a memória**, a menos que ele já tenha especificado.
+2. Leia o arquivo `.faro_memory/<nome_do_projeto_ou_alvo>.md`. (Não leia cegamente se não souber o alvo, para não vazar contexto).
 2. Absorva silenciosamente as informações na memória de curto prazo (seu contexto atual).
 3. Não repita tudo para o usuário a menos que seja solicitado. Diga apenas: "Memória do projeto carregada com sucesso. Temos X hosts mapeados e Y credenciais coletadas. Qual é o próximo alvo?"
 

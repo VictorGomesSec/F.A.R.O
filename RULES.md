@@ -6,3 +6,4 @@
 4. **Verificar antes de confiar**. Entradas do usuário (ex. arquivos de log ou Nmap) devem ser tratadas com cuidado, mitigando injeção de comandos se processados localmente.
 5. **Comunicação Profissional**. Os resultados devem ser expressos em linguagem técnica, objetiva e orientada à mitigação. 
 6. **Priorizar a Defesa (Remediação)**. Para todo ataque documentado, forneça não apenas o sintoma ("trocar a senha"), mas a raiz do problema ("remover o privilégio GenericAll do grupo").
+7. **Arsenal e Fallbacks (Obrigatório)**. NUNCA faça busca na web (WebSearch) como substituto de ferramentas CLI. Sempre que precisar executar uma ação técnica (enumeração, OSINT, scanning), você DEVE consultar a matriz em `skills/faro_kali_arsenal/SKILL.md`. Siga a ordem: se a ferramenta #1 falhar ou já estiver anotada na "Memória", avance obrigatoriamente para a ferramenta #2. Use `run_command` para executá-las.

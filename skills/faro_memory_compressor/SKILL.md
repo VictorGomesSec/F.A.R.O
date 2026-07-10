@@ -25,6 +25,7 @@ Sessões de Red Team geram saídas gigantes (logs do Nmap, BloodHound, scans de 
 - **Portas**: DC (53, 88, 389, 445), Web (80, 443)
 - **Credenciais Encontradas**: svc_sql : P@ssw*** (Descoberta em share público)
 - **Vulnerabilidades Confirmadas**: XSS Refletido em `192.168.1.15/search?q=`
+- **Ferramentas Já Utilizadas (NÃO REPETIR)**: `holehe` (Falhou), `sherlock` (Executado), `ffuf` (Executado)
 ```
 
 **Meta**: "Comprimir o passado para dominar o futuro."
