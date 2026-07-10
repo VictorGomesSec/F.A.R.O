@@ -70,7 +70,8 @@ Mapear a superfície de exposição pública de uma organização/alvo (pessoas,
 
 ## Boas Práticas
 
-- Invocar ferramentas nativas via Bash sempre que aplicável (ex.: holehe, sherlock, theHarvester, SpiderFoot, Shodan CLI, Censys CLI, Amass, Subfinder) antes de recorrer a scripts customizados.
+- **Prioridade MCP**: Se as ferramentas do servidor MCP (ex: `mcp__zebbern-kali-mcp__run_sherlock`) estiverem disponíveis no ambiente, você é **OBRIGADO** a usá-las.
+- Fallback: Apenas invocar ferramentas nativas via Bash (`run_command`) se o MCP não estiver disponível (ex.: holehe, sherlock, theHarvester, Shodan CLI).
 - Documentar a fonte e a data de cada dado coletado para permitir verificação e expiração de validade da informação.
 - Tratar qualquer PII coletada com minimização de dados — coletar apenas o necessário ao objetivo do engajamento.
 - Priorizar fontes agregadas/indexadas publicamente sobre acesso direto a bases de vazamento não verificadas.

@@ -9,8 +9,9 @@ Esta skill é o "Cérebro de Ferramentas" do F.A.R.O. **Você NUNCA deve tentar 
 
 ## Regra de Fallback (MUITO IMPORTANTE)
 1. Escolha a categoria do seu ataque abaixo.
-2. Comece SEMPRE pela ferramenta número 1.
-3. Se a ferramenta número 1 falhar, não estiver instalada, ou já constar na sua "Memória de Ferramentas Utilizadas", **você é OBRIGADO a pular para a ferramenta número 2**. Nunca repita uma ferramenta que já falhou na sessão atual.
+2. **Prioridade MÁXIMA**: Use SEMPRE as tools do MCP `zebbern-kali-mcp` disponíveis no seu ambiente para acionar a ferramenta número 1 (ex: `mcp__zebbern-kali-mcp__run_ffuf`). O MCP resolve a execução dentro de um container Docker seguro e parseia a saída, evitando a sobrecarga de aprovação do terminal.
+3. Se o MCP falhar ou a tool não estiver disponível, faça o fallback usando o terminal (Bash `run_command`).
+4. Se a ferramenta número 1 também falhar no Bash (ou não estiver instalada) ou já constar na sua "Memória", **você é OBRIGADO a pular para a ferramenta número 2**. Nunca repita uma ferramenta falha.
 
 ## Matriz de Arsenal
 
