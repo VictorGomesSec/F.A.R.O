@@ -13,9 +13,9 @@ sudo systemctl enable docker --now
 ## 2. Adicionando o Servidor MCP no Claude Code
 O `zebbern-kali-mcp` é configurado via stdio utilizando o comando docker. O Claude Code suporta adicionar servidores facilmente com o comando `claude mcp add`.
 
-Abra o terminal do Kali onde você roda suas sessões e execute:
+Abra o terminal do Kali onde você roda suas sessões e execute (note o `--` antes do comando docker para o Claude não se confundir com a flag `-i`):
 ```bash
-claude mcp add zebbern-kali-mcp docker run -i --rm zebbern/kali-mcp
+claude mcp add zebbern-kali-mcp -- docker run -i --rm zebbern/kali-mcp
 ```
 *Se você usar uma versão mais antiga do Claude Code que não suporta o comando add, coloque a seguinte configuração no seu arquivo `~/.claude.json` ou `.mcp.json`:*
 ```json
