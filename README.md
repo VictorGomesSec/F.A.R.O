@@ -42,12 +42,14 @@ F.A.R.O/
 
 ## Padrões de Qualidade
 
-Todo componente deste pacote segue: nunca inventar fatos, explicar decisões, planejar antes de implementar, revisar o próprio trabalho, preservar contexto, evitar mudanças desnecessárias, seguir OWASP/MITRE ATT&CK/CWE/NIST/CERT, e indicar incerteza quando houver. Ver `docs/best-practices.md`.
+Todo componente deste pacote segue: nunca inventar fatos, explicar decisões, planejar antes de implementar, revisar o próprio trabalho, preservar contexto, evitar mudanças desnecessárias, seguir OWASP/MITRE ATT&CK/CWE/NIST/CERT, priorizar o uso de ferramentas de linha de comando nativas (Bash) antes de recorrer a scripts complexos, e indicar incerteza quando houver. Ver `docs/best-practices.md`.
 
 ## Licença
 
 Ver [`LICENSE`](LICENSE) (MIT).
 
-## Status
+## Status & Contribuições
 
-Ver [`TASKS.md`](TASKS.md) para o checklist de construção e [`CHANGELOG.md`](CHANGELOG.md) para o histórico de versões.
+O projeto conta com um CI/CD automatizado via GitHub Actions (`check-consistency.js`) que garante 100% de integridade estrutural (links, frontmatter e arquitetura) a cada contribuição. 
+
+Ver [`TASKS.md`](TASKS.md) para o roadmap de construção e [`CHANGELOG.md`](CHANGELOG.md) para o histórico de versões.
