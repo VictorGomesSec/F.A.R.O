@@ -2,6 +2,45 @@
 
 Todas as mudanças notáveis deste pacote são documentadas aqui.
 
+## [0.4.0] — 2026-07-09
+
+Auditoria estrutural própria — cobertura de `rules/` para o roster ofensivo/forense/cloud/mobile, e automação da verificação de consistência que antes era manual.
+
+### Adicionado
+
+- `rules/mitre-attack-mapping.md` — fonte única de referência ao MITRE ATT&CK (Enterprise, Containers, Mobile, e ATLAS para IA). Consumida por 14 agentes que citavam táticas/técnicas inline sem regra compartilhada: `detection-engineer`, `windows-internals-specialist`, `malware-analyst`, `active-directory-specialist`, `android-security`, `ios-security`, `cloud-security-specialist`, `container-security-specialist`, `infrastructure-reviewer`, `kubernetes-security-specialist`, `mobile-security-specialist`, `purple-team-advisor`, `reverse-engineer`, `threat-modeler`.
+- `rules/mobile-security-checklist.md` — checklist OWASP MASVS/MASTG. Consumida por `mobile-security-specialist`, `android-security`, `ios-security`.
+- `rules/cloud-security-baseline.md` — CIS Benchmarks (AWS/Azure/GCP) e shared responsibility model. Consumida por `cloud-security-specialist`, `kubernetes-security-specialist`, `infrastructure-reviewer`.
+- `rules/incident-response-standards.md` — fases NIST SP 800-61r2 e cadeia de custódia forense. Consumida por `incident-response-advisor`, `digital-forensics-specialist`.
+- `scripts/check-consistency.js` — auditoria estrutural determinística (zero dependências): links relativos quebrados, frontmatter de `agents/*.md`, e contagens de arquivo citadas em prosa (`README.md`, `docs/architecture.md`, incluindo a derivação "N agentes do roster" em `chief-security-architect.md`). Substitui a verificação manual por agente a cada lote.
+- `.github/workflows/consistency.yml` — roda `scripts/check-consistency.js` em push/PR para `master`/`main`.
+- `TASKS.md` seção 10 — passa a servir como checklist vivo de manutenção pós-lançamento, não só histórico da construção inicial (v0.1.0).
+
+### Corrigido
+
+- 3 agentes já citados como consumidores em regras existentes, mas sem link de volta: `technical-writer` → `rules/documentation-standards.md`; `llm-security-specialist` e `ai-security-reviewer` → `rules/prompt-engineering.md`.
+- Contagem de `rules/` desatualizada em `README.md` e `docs/architecture.md` ("14 regras" → "18 regras", refletindo as 4 regras novas).
+
+### Notas de Processo
+
+- `agents/exploit-developer.md` permanece sem link para `rules/` — nenhuma regra atual cobre o domínio de weaponization de exploit; confirmado como gap legítimo, não corrigido artificialmente.
+- Auditoria rodada via `scripts/check-consistency.js` após todas as mudanças acima: 0 links quebrados, 38/38 agentes com frontmatter válido, contagens em prosa consistentes.
+
+## [0.3.0] — 2026-07-09
+
+Catálogo de MCPs opcionais — sem MCP conectado por padrão, documentação apenas.
+
+### Adicionado
+
+- `docs/mcp-servers.md` — catálogo de servidores MCP reais e verificados, organizado em 5 fases por risco (OSINT/vuln intel → código/build → cloud → exploração ativa → container/K8s/forense de rede), com credencial necessária, repositório de origem e mapeamento para os agentes que passam a usá-los. Nenhum MCP é instalado automaticamente com o plugin; ativação é manual e por engajamento.
+- Seção "MCPs Opcionais" em `docs/installation.md` apontando para o catálogo.
+- Nota em `docs/creating-agents.md` sobre a convenção `mcp__<servidor>__<tool>` para o campo `tools:`, com a regra de nunca adivinhar o nome de uma tool antes de conectar o servidor e confirmar de verdade.
+
+### Notas de Processo
+
+- `plugin.json` estava desatualizado (`0.1.0`) em relação ao `CHANGELOG.md` (que já documentava `0.2.0`) — corrigido para acompanhar esta versão.
+- Frontmatter (`tools:`) dos agentes ainda **não** foi alterado — os nomes exatos das tools de cada MCP só serão adicionados depois que cada servidor for conectado e verificado ao vivo (ver passo a passo em `docs/mcp-servers.md`).
+
 ## [0.2.0] — 2026-07-08
 
 Renomeado de `ecc-security-pack` para **FARO** e empacotado como plugin Claude Code instalável.

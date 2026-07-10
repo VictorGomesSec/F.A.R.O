@@ -9,7 +9,7 @@ O FARO é um framework independente para Claude Code, com um conjunto modular de
 ```
 faro/
   agents/       38 especialistas — "quem faz o trabalho"
-  rules/        14 regras reutilizáveis — "o padrão contra o qual comparar"
+  rules/        18 regras reutilizáveis — "o padrão contra o qual comparar"
   commands/     19 comandos — "como invocar um especialista/workflow"
   workflows/    16 processos multi-agente — "a orquestração de ponta a ponta"
   templates/    13 modelos de documento — "o formato da saída"
@@ -41,5 +41,6 @@ faro/
 ## Ver Também
 
 - `installation.md` — como instalar/usar o pacote.
+- `mcp-servers.md` — catálogo de MCPs opcionais por fase de risco, e o mapeamento MCP → agente.
 - `creating-agents.md`, `creating-commands.md`, `creating-workflows.md` — como estender o framework.
 - `best-practices.md` — princípios de qualidade que todo componente deve seguir.

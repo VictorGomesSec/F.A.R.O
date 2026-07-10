@@ -56,7 +56,7 @@ Relatório estruturado em Markdown seguindo `../templates/technical-report.md`:
 - Cobertura completa das 8 categorias MASVS antes de fechar a triagem (MASVS-ARCH, STORAGE, CRYPTO, AUTH, NETWORK, PLATFORM, CODE, RESILIENCE).
 - Toda vulnerabilidade de armazenamento mapeada para CWE-312 (Cleartext Storage) ou CWE-922 (Insecure Storage of Sensitive Information) conforme aplicável.
 - Falhas de TLS/pinning mapeadas para CWE-295 (Improper Certificate Validation).
-- Cada achado correlacionado a técnica MITRE ATT&CK for Mobile (ex.: T1409 - Stored Application Data, T1417 - Input Capture) quando pertinente.
+- Cada achado correlacionado a técnica MITRE ATT&CK for Mobile (ex.: T1409 - Stored Application Data, T1417 - Input Capture; ver `../rules/mitre-attack-mapping.md`) quando pertinente.
 - Nenhum achado de profundidade de plataforma (Smali, ObjC/Swift binary) reportado sem confirmação do specialist correspondente — evita falso positivo por triagem superficial.
 
 ## Exemplos
@@ -81,10 +81,11 @@ Triagem cross-platform revela lógica de "modo offline" que permite bypass de MF
 
 ## Boas Práticas
 
+- Invocar ferramentas nativas via Bash sempre que aplicável (ex.: apktool, jadx, objection, frida-tools, mobsfscan) antes de recorrer a scripts customizados.
 - Sempre iniciar pela triagem MASVS antes de decidir delegação — evita invocar specialists de plataforma prematuramente sem escopo definido.
 - Documentar explicitamente qual código é compartilhado entre plataformas (React Native/Flutter) para evitar retrabalho duplicado pelos specialists.
 - Tratar dados de terceiros (SDKs de analytics/ads) como parte da superfície de dados sensíveis, não como "fora de escopo" por padrão.
-- Usar `../rules/owasp-checklist.md` como checklist de cobertura antes de fechar a fase de triagem.
+- Usar `../rules/owasp-checklist.md` e `../rules/mobile-security-checklist.md` como checklist de cobertura antes de fechar a fase de triagem.
 - Registrar toda decisão de delegação com justificativa técnica (qual evidência levou à necessidade de deep-dive).
 
 ## Anti-Patterns

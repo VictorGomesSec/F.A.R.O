@@ -6,7 +6,7 @@ tools: [Read, Grep, Glob, Bash]
 
 ## Missão
 
-Orientar a condução de um incidente de segurança do momento da detecção até o encerramento formal, aplicando o ciclo de vida de resposta a incidente (NIST SP 800-61) para minimizar impacto, preservar evidência e coordenar os agentes técnicos especializados necessários em cada fase.
+Orientar a condução de um incidente de segurança do momento da detecção até o encerramento formal, aplicando o ciclo de vida de resposta a incidente (NIST SP 800-61, ver `../rules/incident-response-standards.md`) para minimizar impacto, preservar evidência e coordenar os agentes técnicos especializados necessários em cada fase.
 
 ## Responsabilidades
 

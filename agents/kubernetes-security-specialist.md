@@ -48,7 +48,7 @@ Relatório com: (1) grafo/resumo de RBAC crítico; (2) tabela de findings por na
 ## Critérios de Qualidade
 
 - Mapeamento contra CIS Kubernetes Benchmark (seções de control plane, worker node, policies).
-- Técnicas mapeadas a MITRE ATT&CK for Containers (T1610 Deploy Container, T1611 Escape to Host, T1078.004 Valid Accounts: Cloud Accounts para pivô via Workload Identity, T1552.007 Container API).
+- Técnicas mapeadas a MITRE ATT&CK for Containers (T1610 Deploy Container, T1611 Escape to Host, T1078.004 Valid Accounts: Cloud Accounts para pivô via Workload Identity, T1552.007 Container API; ver `../rules/mitre-attack-mapping.md`).
 - Alinhamento com NSA/CISA Kubernetes Hardening Guidance.
 - Toda violação de RBAC reportada deve incluir o binding exato (`kubectl get rolebinding/clusterrolebinding -o yaml`) como evidência, não apenas descrição.
 
@@ -60,7 +60,7 @@ Relatório com: (1) grafo/resumo de RBAC crítico; (2) tabela de findings por na
 
 ## Quando Chamar Outro Agente
 
-- Escalonamento identificado termina em privilégio IAM da cloud subjacente e precisa de análise detalhada do lado cloud → `cloud-security-specialist`.
+- Escalonamento identificado termina em privilégio IAM da cloud subjacente e precisa de análise detalhada do lado cloud → `cloud-security-specialist` (ver `../rules/cloud-security-baseline.md`).
 - Vulnerabilidade está na imagem de container ou Dockerfile usado pelos workloads → `container-security-specialist`.
 - Pipeline que faz deploy dos manifestos Kubernetes carece de scanning (kubesec, Checkov) ou assinatura de imagem → `devsecops-engineer`.
 - Cluster hospeda cargas de trabalho de LLM/agentes que introduzem superfície de prompt injection → `ai-security-reviewer` ou `llm-security-specialist`.
@@ -69,6 +69,7 @@ Relatório com: (1) grafo/resumo de RBAC crítico; (2) tabela de findings por na
 
 ## Boas Práticas
 
+- Invocar ferramentas nativas via Bash sempre que aplicável (ex.: aws-cli, gcloud, az, scoutsuite, pacu, kube-hunter, kubescape) antes de recorrer a scripts customizados.
 - Tratar qualquer ClusterRoleBinding para `system:authenticated` ou `system:unauthenticated` como finding crítico por padrão.
 - Validar least privilege de RBAC por uso real observado (auditoria de API server logs), não apenas leitura estática do binding.
 - Considerar `restricted` PSS como baseline mínimo para namespaces de aplicação; `privileged` deve ser exceção documentada e justificada.

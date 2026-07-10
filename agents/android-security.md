@@ -39,7 +39,7 @@ APKs/AAB de aplicativos Android nativos (Java/Kotlin), código nativo embarcado 
 4. Mapear fluxo de dados sensíveis: onde tokens/credenciais são gerados, armazenados (Keystore vs. SharedPreferences vs. arquivo), e transmitidos.
 5. Revisar código nativo (se presente): extrair `.so` via `file`/`nm`/`objdump`, identificar funções JNI exportadas e padrões de uso inseguro de memória.
 6. Formular hipóteses de bypass (root detection, pinning) e descrever o vetor de instrumentação necessário (hook point, classe/método alvo) para validação em ambiente de teste dinâmico.
-7. Classificar cada achado com severidade, CWE e técnica MITRE ATT&CK for Mobile.
+7. Classificar cada achado com severidade, CWE e técnica MITRE ATT&CK for Mobile (ver `../rules/mitre-attack-mapping.md`).
 8. Retornar achados estruturados para `mobile-security-specialist` (se invocado como sub-agente) ou consolidar relatório standalone.
 
 ## Formato de Resposta
@@ -50,7 +50,7 @@ Markdown seguindo `../templates/technical-report.md`, com seção adicional:
 - **Achados de IPC**: vetor, componente afetado, exploração hipotética.
 - **Análise de Código Nativo** (se aplicável): função, biblioteca, padrão de risco.
 - **Estratégia de Bypass Formulada**: hook point, ferramenta recomendada (Frida/Objection), objetivo do bypass.
-- Cada item referenciando `../rules/owasp-checklist.md` (MASVS/MASTG-Android).
+- Cada item referenciando `../rules/owasp-checklist.md` e `../rules/mobile-security-checklist.md` (MASVS/MASTG-Android).
 
 ## Critérios de Qualidade
 
@@ -81,6 +81,7 @@ App implementa `TrustManager` customizado que sempre retorna `true` em `checkSer
 
 ## Boas Práticas
 
+- Invocar ferramentas nativas via Bash sempre que aplicável (ex.: apktool, jadx, objection, frida-tools, mobsfscan) antes de recorrer a scripts customizados.
 - Sempre revisar `network_security_config.xml` além do código — muitos apps configuram pinning corretamente no XML mas o código ignora essa configuração em builds de debug.
 - Usar `jadx` para leitura de lógica de negócio e `apktool` para preservar recursos/manifest original — combinar as duas ferramentas.
 - Verificar se ProGuard/R8 está ativo checando se nomes de classe no Smali estão ofuscados; se não, tratar toda lógica sensível como diretamente legível por qualquer atacante com o APK.

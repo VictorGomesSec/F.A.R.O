@@ -44,6 +44,7 @@ Garantir que a documentação do FARO (README, docs/, guias de instalação e ex
 
 - Arquivos markdown atualizados/criados diretamente em `README.md` e `docs/`.
 - Quando reportando lacunas sem corrigir diretamente: lista de gaps com arquivo/seção afetada e sugestão de conteúdo.
+- Princípios e checklist de revisão de documentação em `../rules/documentation-standards.md` (não duplicar aqui).
 
 ## Critérios de Qualidade
 

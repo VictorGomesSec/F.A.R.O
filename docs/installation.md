@@ -46,6 +46,10 @@ Depois de instalado, peça ao `chief-security-architect` (ver `../agents/chief-s
 
 Para atualizar o pacote, sincronize a partir do repositório de origem (`git pull` ou equivalente) e rode uma auditoria de consistência com `../agents/framework-maintainer.md` antes de considerar a atualização concluída, especialmente se você tiver customizações locais.
 
+## MCPs Opcionais
+
+O FARO funciona inteiramente com as ferramentas nativas do Claude Code (`Read, Grep, Glob, Bash, WebFetch, WebSearch`) — nenhum MCP é obrigatório. Para dar a agentes específicos (OSINT, cloud, código-fonte, exploração ativa) acesso estruturado a fontes que hoje eles só alcançam via `WebFetch`/`WebSearch`/`Bash` cru, ver `mcp-servers.md` — catálogo de servidores MCP reais, organizados por fase de risco, com credenciais necessárias e mapeamento para os agentes que passam a usá-los.
+
 ## Customização Local
 
 Se seu contexto exige agentes adicionais ou regras específicas da organização, adicione-os seguindo as convenções em `creating-agents.md`/`creating-commands.md`/`creating-workflows.md` — evite modificar os arquivos existentes diretamente, para facilitar merges futuros com o repositório de origem.

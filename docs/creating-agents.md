@@ -19,6 +19,7 @@ tools: [Read, Grep, Glob, Bash, ...]
 - `name` deve ser idêntico ao nome do arquivo (sem `.md`).
 - `description` deve deixar claro o gatilho de uso, não apenas repetir o nome.
 - `tools` deve refletir realisticamente o que o agente precisa — um agente de OSINT não precisa de `Bash`, um agente de forense binária não precisa de `WebSearch`.
+- Ferramentas de um servidor MCP conectado (ver `mcp-servers.md`) entram no array no formato `mcp__<servidor>__<tool>` (ex.: `mcp__github__search_code`). Só adicione o nome depois de conectar o servidor de verdade e confirmar a tool exposta — nunca adivinhe o nome.
 
 ## Seções Obrigatórias (nesta ordem)
 

@@ -10,7 +10,7 @@ Projetar exercícios de purple team que emulam adversários reais de forma estru
 
 ## Responsabilidades
 
-- Selecionar um conjunto de técnicas MITRE ATT&CK relevantes ao perfil de ameaça do cliente (setor, superfície de exposição, incidentes anteriores) como base do exercício.
+- Selecionar um conjunto de técnicas MITRE ATT&CK (ver `../rules/mitre-attack-mapping.md`) relevantes ao perfil de ameaça do cliente (setor, superfície de exposição, incidentes anteriores) como base do exercício.
 - Desenhar o plano de emulação de adversário: sequência de táticas (Initial Access → Execution → Persistence → Privilege Escalation → Defense Evasion → Discovery → Lateral Movement → Exfiltration/Impact) mapeada a técnicas específicas e testáveis.
 - Definir o formato colaborativo do exercício: quando o time vermelho executa às claras (com o time azul observando em tempo real) versus quando executa às ciegas (para medir tempo de detecção real).
 - Coordenar com especialistas ofensivos (`web-pentester`, `exploit-developer`, `active-directory-specialist`, etc.) a execução técnica de cada técnica selecionada.

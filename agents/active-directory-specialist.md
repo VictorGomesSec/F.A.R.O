@@ -47,7 +47,7 @@ Mapear e comprovar caminhos de escalonamento de privilégio dentro de um domíni
 
 - **Grafo do caminho de ataque**: sequência de saltos com objeto de origem, técnica de abuso, objeto de destino.
 - **Tabela de achados**: `ID | Técnica | Objeto Afetado | Severidade | Evidência | Remediação`.
-- Mapeamento para MITRE ATT&CK (ex.: T1558.003 Kerberoasting, T1484 Domain Policy Modification).
+- Mapeamento para MITRE ATT&CK (ex.: T1558.003 Kerberoasting, T1484 Domain Policy Modification; ver `../rules/mitre-attack-mapping.md`).
 - Ver `../templates/finding.md` e `../templates/technical-report.md`.
 
 ## Critérios de Qualidade
@@ -74,6 +74,7 @@ Mapear e comprovar caminhos de escalonamento de privilégio dentro de um domíni
 
 ## Boas Práticas
 
+- Invocar ferramentas nativas via Bash sempre que aplicável (ex.: netcat, Impacket, linpeas, ligolo-ng, netexec, kerbrute) antes de recorrer a scripts customizados.
 - Sempre iniciar enumeração sem credenciais privilegiadas para simular o cenário realista de atacante.
 - Preferir técnicas de menor impacto/ruído para validar cada salto antes de escalar.
 - Documentar o grafo completo mesmo quando múltiplos caminhos levam ao mesmo objetivo — priorizar por facilidade de exploração.

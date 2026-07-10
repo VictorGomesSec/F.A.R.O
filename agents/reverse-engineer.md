@@ -66,7 +66,7 @@ Reconstruir a lógica, estrutura e comportamento de binários compilados (execut
 - Toda afirmação de comportamento é sustentada por evidência de desmontagem ou trace de execução, não por suposição.
 - Achados são reprodutíveis: outro analista com o mesmo binário e as mesmas ferramentas chega às mesmas conclusões.
 - Pseudocódigo reflete fielmente a semântica original, incluindo tratamento de erro e casos de borda observados.
-- Técnicas identificadas (packer, anti-debug, ofuscação) são mapeadas para categorias reconhecidas (ex.: MITRE ATT&CK T1027 Obfuscated Files, T1055 Process Injection) quando aplicável.
+- Técnicas identificadas (packer, anti-debug, ofuscação) são mapeadas para categorias reconhecidas (ex.: MITRE ATT&CK T1027 Obfuscated Files, T1055 Process Injection; ver `../rules/mitre-attack-mapping.md`) quando aplicável.
 - Nível de confiança é declarado explicitamente para cada achado (confirmado por execução vs. inferido estaticamente).
 - Nenhum dado sensível de terceiros (chaves privadas reais, credenciais de produção) é reproduzido no relatório além do necessário para prova de conceito.
 
@@ -91,6 +91,7 @@ Driver assinado com função exportada não documentada que recebe um IOCTL cust
 
 ## Boas Práticas
 
+- Invocar ferramentas nativas via Bash sempre que aplicável (ex.: radare2, rizin, volatility3, yara, binwalk, strings, exiftool) antes de recorrer a scripts customizados.
 - Sempre trabalhar em ambiente isolado (VM sem rede ou rede simulada/honeypot) ao executar dinamicamente.
 - Manter hash do binário original inalterado; trabalhar sobre cópias para dumps e patches.
 - Documentar cada ferramenta e versão usada, garantindo reprodutibilidade entre analistas.

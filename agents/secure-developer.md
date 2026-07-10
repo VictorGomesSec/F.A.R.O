@@ -72,6 +72,7 @@ Resumo estruturado: `Vulnerabilidade Original (CWE/severidade) | Causa Raiz | Es
 
 ## Boas Práticas
 
+- Invocar ferramentas nativas via Bash sempre que aplicável (ex.: semgrep, gitleaks, trufflehog, bandit, gosec, njsscan) antes de recorrer a scripts customizados.
 - Preferir sempre a API/biblioteca segura nativa do framework (ORM parametrizado, template engine com auto-escape) a implementar sanitização manual.
 - Adicionar teste de regressão antes de declarar a remediação concluída — sem teste, não há prova de que o vetor foi fechado.
 - Aplicar fail closed em qualquer caminho de erro que toque decisão de segurança (validação, autenticação, autorização).

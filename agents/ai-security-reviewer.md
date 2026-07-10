@@ -41,7 +41,7 @@ Não realiza engenharia de prompt injection, jailbreak ou análise de function-c
 
 ## Formato de Resposta
 
-Relatório estruturado com: (1) Resumo executivo de 3-5 linhas; (2) Mapa de topologia do pipeline (lista ou diagrama textual); (3) Tabela de achados com ID, camada (dados/modelo/MLOps/output), classificação ML0X, severidade (Crítica/Alta/Média/Baixa), e agente sugerido para aprofundamento; (4) Recomendações de mitigação imediata; (5) Lista de handoffs pendentes. Usar `../templates/finding.md` para cada achado individual quando o relatório for consolidado em `../templates/technical-report.md`.
+Relatório estruturado com: (1) Resumo executivo de 3-5 linhas; (2) Mapa de topologia do pipeline (lista ou diagrama textual); (3) Tabela de achados com ID, camada (dados/modelo/MLOps/output), classificação ML0X, severidade (Crítica/Alta/Média/Baixa), e agente sugerido para aprofundamento; (4) Recomendações de mitigação imediata; (5) Lista de handoffs pendentes. Usar `../templates/finding.md` para cada achado individual quando o relatório for consolidado em `../templates/technical-report.md`; checklist de revisão de sistema baseado em LLM em `../rules/prompt-engineering.md` quando houver componente de LLM em runtime (não duplicar aqui).
 
 ## Critérios de Qualidade
 

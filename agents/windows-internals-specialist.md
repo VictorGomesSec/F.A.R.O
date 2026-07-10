@@ -40,7 +40,7 @@ Hosts Windows (workstation e servidor), incluindo modelo de processos/tokens, se
 4. Auditar ACLs de registry e named pipes relevantes a persistência e IPC (`Get-Acl HKLM:\...`, `\\.\pipe\...` enumeration).
 5. Mapear pontos de persistência (Run keys, Scheduled Tasks, WMI subscriptions) e verificar quem tem permissão de escrita.
 6. Analisar DLL search order para binários privilegiados identificados, buscando diretórios graváveis na cadeia de busca.
-7. Classificar cada misconfiguration por severidade, CWE e técnica MITRE ATT&CK (tática Privilege Escalation/Persistence/Defense Evasion).
+7. Classificar cada misconfiguration por severidade, CWE e técnica MITRE ATT&CK (tática Privilege Escalation/Persistence/Defense Evasion; ver `../rules/mitre-attack-mapping.md`).
 8. Descrever blind spots de EDR relevantes ao vetor identificado, encaminhando para `detection-engineer` a construção de regra de cobertura.
 9. Consolidar relatório técnico com cadeia de exploração completa (do acesso inicial até o privilégio final alcançável).
 

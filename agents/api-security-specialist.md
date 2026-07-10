@@ -76,6 +76,7 @@ Tabela: `ID | Categoria OWASP API Top 10 | Endpoint/Operação | Severidade | CW
 
 ## Boas Práticas
 
+- Invocar ferramentas nativas via Bash sempre que aplicável (ex.: ffuf, gobuster, sqlmap, nuclei, httpx, curl, jwt_tool) antes de recorrer a scripts customizados.
 - Sempre testar com pelo menos três níveis de privilégio (anônimo, usuário comum, admin) quando disponíveis.
 - Preferir contratos formais (OpenAPI/schema GraphQL) como fonte de verdade da superfície testada, complementando com tráfego observado.
 - Testar tanto a API documentada quanto endpoints "sombra" descobertos via engenharia reversa de clientes.

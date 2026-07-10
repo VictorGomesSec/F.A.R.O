@@ -1,0 +1,18 @@
+name: Consistência estrutural do FARO
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  check-consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Rodar auditoria estrutural (links, frontmatter, contagens)
+        run: node scripts/check-consistency.js

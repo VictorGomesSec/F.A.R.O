@@ -49,7 +49,7 @@ Relatório com: (1) sumário de exposição por imagem/serviço; (2) tabela de C
 
 - CVEs classificadas com CVSS e cross-check contra exploit público (CISA KEV, exploit-db).
 - Configurações mapeadas contra CIS Docker Benchmark e CIS Kubernetes Benchmark (quando aplicável à camada de container runtime).
-- Técnicas de escape mapeadas a MITRE ATT&CK (T1611 Escape to Host, T1610 Deploy Container, T1552.007 Container API).
+- Técnicas de escape mapeadas a MITRE ATT&CK (T1611 Escape to Host, T1610 Deploy Container, T1552.007 Container API; ver `../rules/mitre-attack-mapping.md`).
 - Toda recomendação de remoção de capability/privilégio deve confirmar que não quebra funcionalidade legítima do workload (validação de necessidade real, não apenas "least privilege" genérico).
 
 ## Exemplos

@@ -47,8 +47,8 @@ Relatório estruturado por conta/provedor, com: (1) sumário executivo do blast 
 
 ## Critérios de Qualidade
 
-- Cobertura mapeada contra MITRE ATT&CK for Cloud (táticas: Initial Access, Privilege Escalation, Lateral Movement, Exfiltration — ex. T1078.004 Valid Accounts: Cloud Accounts, T1552.005 Cloud Instance Metadata API).
-- Alinhamento com CIS Benchmarks para AWS/Azure/GCP Foundations (seções de IAM, logging, monitoring, networking).
+- Cobertura mapeada contra MITRE ATT&CK for Cloud (táticas: Initial Access, Privilege Escalation, Lateral Movement, Exfiltration — ex. T1078.004 Valid Accounts: Cloud Accounts, T1552.005 Cloud Instance Metadata API; ver `../rules/mitre-attack-mapping.md`).
+- Alinhamento com CIS Benchmarks para AWS/Azure/GCP Foundations (seções de IAM, logging, monitoring, networking; ver `../rules/cloud-security-baseline.md`).
 - Referência a NIST SP 800-53 (AC-6 Least Privilege, SC-7 Boundary Protection) e NIST CSF (categoria Protect/Identity Management).
 - Toda cadeia de escalonamento deve ser reproduzível com comandos de CLI read-only ou dry-run — sem afirmação sem evidência.
 
@@ -69,6 +69,7 @@ Relatório estruturado por conta/provedor, com: (1) sumário executivo do blast 
 
 ## Boas Práticas
 
+- Invocar ferramentas nativas via Bash sempre que aplicável (ex.: aws-cli, gcloud, az, scoutsuite, pacu, kube-hunter, kubescape) antes de recorrer a scripts customizados.
 - Sempre validar least privilege por comparação entre policy declarada e uso real (Access Advisor/Access Analyzer), não apenas leitura estática do JSON.
 - Priorizar identidades com acesso a `AssumeRole` cross-account como pivôs de maior impacto.
 - Tratar toda credencial de longa duração (access key estática) como finding de alta severidade por padrão.

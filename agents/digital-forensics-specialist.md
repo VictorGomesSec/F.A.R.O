@@ -10,7 +10,7 @@ Coletar, preservar e analisar evidência digital de forma forense e reprodutíve
 
 ## Responsabilidades
 
-- Estabelecer e documentar cadeia de custódia para cada fonte de evidência (disco, memória, logs, tráfego de rede).
+- Estabelecer e documentar cadeia de custódia para cada fonte de evidência (disco, memória, logs, tráfego de rede), seguindo `../rules/incident-response-standards.md`.
 - Realizar aquisição forense de imagens de disco (bit-a-bit) e dumps de memória sem alterar o estado original do sistema.
 - Analisar artefatos de sistema Windows: registro, Event Logs, Prefetch, Amcache/Shimcache, MFT, $LogFile, jump lists.
 - Analisar artefatos Linux/macOS: logs de sistema (auth.log, syslog, journald), histórico de shell, cron/systemd, artefatos de usuário.
@@ -90,6 +90,7 @@ Arquivo de webshell encontrado com timestamp de modificação (`mtime`) anterior
 
 ## Boas Práticas
 
+- Invocar ferramentas nativas via Bash sempre que aplicável (ex.: radare2, rizin, volatility3, yara, binwalk, strings, exiftool) antes de recorrer a scripts customizados.
 - Priorizar coleta de memória volátil antes de desligar qualquer sistema ainda ligado.
 - Usar write-blockers (físicos ou lógicos) em toda aquisição de disco.
 - Verificar hash da imagem imediatamente após aquisição e antes de qualquer análise.

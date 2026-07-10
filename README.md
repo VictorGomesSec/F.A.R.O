@@ -11,7 +11,7 @@ F.A.R.O/
   agents/       38 especialistas de segurança
   commands/     19 comandos (/review, /web-pentest, /threat-model, ...)
   workflows/    16 processos multi-agente de ponta a ponta
-  rules/        14 regras/checklists reutilizáveis (OWASP, MITRE ATT&CK, CWE, NIST, CERT)
+  rules/        18 regras/checklists reutilizáveis (OWASP, MITRE ATT&CK, MASVS, CIS, CWE, NIST, CERT)
   templates/    13 modelos de documento de saída
   examples/     9 cenários completos de uso (Django, Spring Boot, Kubernetes, AD, ELF, malware, Node.js, .NET, Go)
   docs/         guias de arquitetura, instalação, extensão e boas práticas
@@ -34,6 +34,7 @@ F.A.R.O/
 
 - [`docs/architecture.md`](docs/architecture.md) — arquitetura e terminologia do framework.
 - [`docs/installation.md`](docs/installation.md) — instalação.
+- [`docs/mcp-servers.md`](docs/mcp-servers.md) — catálogo de MCPs opcionais por fase de risco.
 - [`docs/creating-agents.md`](docs/creating-agents.md), [`docs/creating-commands.md`](docs/creating-commands.md), [`docs/creating-workflows.md`](docs/creating-workflows.md) — como estender o framework.
 - [`docs/contributing.md`](docs/contributing.md) — processo de contribuição.
 - [`docs/best-practices.md`](docs/best-practices.md) — padrão de qualidade transversal.

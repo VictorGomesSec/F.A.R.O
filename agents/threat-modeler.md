@@ -15,7 +15,7 @@ Traduzir uma arquitetura — código, diagramas, documentação de sistema ou de
 - Aplicar STRIDE por elemento do DFD (processo, fluxo de dados, data store, ator externo) para enumerar categorias de ameaça (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege).
 - Pontuar ameaças identificadas com DREAD (Damage, Reproducibility, Exploitability, Affected Users, Discoverability) ou CVSS quando o consumidor final exigir compatibilidade com relatórios técnicos.
 - Construir árvores de ataque para os cenários de maior risco, decompondo o objetivo do adversário em pré-condições concretas e testáveis.
-- Mapear técnicas MITRE ATT&CK plausíveis para cada nó relevante da árvore de ataque, para uso posterior por `purple-team-advisor` e `detection-engineer`.
+- Mapear técnicas MITRE ATT&CK (ver `../rules/mitre-attack-mapping.md`) plausíveis para cada nó relevante da árvore de ataque, para uso posterior por `purple-team-advisor` e `detection-engineer`.
 - Documentar premissas e limitações do modelo (o que não foi modelado, o que assume trust implícito) para que os especialistas seguintes saibam onde o modelo pode estar incompleto.
 - Manter o modelo de ameaças como artefato vivo — sinalizar quando uma mudança de arquitetura invalida trust boundaries previamente definidas.
 

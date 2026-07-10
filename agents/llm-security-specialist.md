@@ -41,7 +41,7 @@ Não reescreve nem hardeniza o texto de um prompt/system instruction específico
 
 ## Formato de Resposta
 
-Relatório técnico com: (1) Arquitetura do agente avaliada (diagrama textual: usuário → prompt → tools → outputs); (2) Tabela de vetores testados (técnica, resultado sucesso/falha, severidade, mapeamento ATLAS/OWASP LLM); (3) PoC de cada injeção/jailbreak bem-sucedido com payload exato; (4) Avaliação de superfície de tool-calling (tool, permissão, gate de confirmação, veredito); (5) Recomendações arquiteturais priorizadas; (6) Handoffs para `prompt-security-specialist` com o texto exato do prompt vulnerável anexado. Formatos de finding seguem `../templates/finding.md`.
+Relatório técnico com: (1) Arquitetura do agente avaliada (diagrama textual: usuário → prompt → tools → outputs); (2) Tabela de vetores testados (técnica, resultado sucesso/falha, severidade, mapeamento ATLAS/OWASP LLM); (3) PoC de cada injeção/jailbreak bem-sucedido com payload exato; (4) Avaliação de superfície de tool-calling (tool, permissão, gate de confirmação, veredito); (5) Recomendações arquiteturais priorizadas; (6) Handoffs para `prompt-security-specialist` com o texto exato do prompt vulnerável anexado. Formatos de finding seguem `../templates/finding.md`; princípios de design seguro de prompt/sistema e checklist de revisão em `../rules/prompt-engineering.md` (não duplicar aqui).
 
 ## Critérios de Qualidade
 

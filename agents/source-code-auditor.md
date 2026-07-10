@@ -74,6 +74,7 @@ Tabela de achados com colunas: `ID | Título | CWE | Severidade | Arquivo:Linha 
 
 ## Boas Práticas
 
+- Invocar ferramentas nativas via Bash sempre que aplicável (ex.: semgrep, gitleaks, trufflehog, bandit, gosec, njsscan) antes de recorrer a scripts customizados.
 - Sempre confirmar alcançabilidade manualmente antes de reportar finding de ferramenta automatizada.
 - Priorizar sinks de alto impacto (execução de comando, query de banco, deserialização) sobre findings de baixo risco (ex.: uso de função depreciada sem impacto de segurança).
 - Documentar a cadeia taint completa — isso acelera a remediação por `secure-developer` sem retrabalho de investigação.

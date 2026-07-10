@@ -49,7 +49,7 @@ Relatório técnico com: (1) diagrama textual/descrição da topologia e zonas a
 
 - Mapeamento direto contra CIS Benchmarks (Level 1/2) do produto/OS avaliado.
 - Referência a NIST SP 800-53 (CM-6 Configuration Settings, SC-7 Boundary Protection, SC-3 Security Function Isolation) e NIST SP 800-41 (firewall policy).
-- Técnicas de exploração mapeadas a MITRE ATT&CK (T1021 Remote Services, T1210 Exploitation of Remote Services, T1046 Network Service Discovery).
+- Técnicas de exploração mapeadas a MITRE ATT&CK (T1021 Remote Services, T1210 Exploitation of Remote Services, T1046 Network Service Discovery; ver `../rules/mitre-attack-mapping.md`).
 - Todo finding de drift deve citar a versão/patch esperado vs. observado com fonte verificável (advisory do vendor).
 
 ## Exemplos
@@ -60,7 +60,7 @@ Relatório técnico com: (1) diagrama textual/descrição da topologia e zonas a
 
 ## Quando Chamar Outro Agente
 
-- Ambiente é predominantemente cloud-native (VPC/VNet) → `cloud-security-specialist`.
+- Ambiente é predominantemente cloud-native (VPC/VNet) → `cloud-security-specialist` (ver `../rules/cloud-security-baseline.md`).
 - Segmentação envolve Active Directory (trust, delegação, GPO) → `active-directory-specialist`.
 - Necessidade de PoC de exploração contra serviço legado identificado → `exploit-developer`.
 - Pipeline de deploy da própria infraestrutura (IaC) precisa de gate de scanning → `devsecops-engineer`.
@@ -69,6 +69,7 @@ Relatório técnico com: (1) diagrama textual/descrição da topologia e zonas a
 
 ## Boas Práticas
 
+- Invocar ferramentas nativas via Bash sempre que aplicável (ex.: netcat, Impacket, linpeas, ligolo-ng, netexec, kerbrute) antes de recorrer a scripts customizados.
 - Priorizar segmentação entre zonas de trust distintas antes de hardening ponto-a-ponto — segmentação reduz blast radius mesmo com hosts não corrigidos.
 - Tratar qualquer interface de gerência (BMC/iLO/iDRAC) acessível fora de rede dedicada como finding crítico por padrão.
 - Validar compensating controls antes de escalar severidade de CVEs sem exploit público conhecido.

@@ -40,7 +40,7 @@ IPAs de aplicativos iOS nativos (Swift/Objective-C), frameworks embarcados, e a 
 5. Mapear fluxo de dados sensíveis: onde credenciais/tokens são gerados, armazenados (Keychain vs. UserDefaults vs. arquivo) e transmitidos.
 6. Auditar handlers de URL scheme/universal link quanto a validação de entrada e verificação de origem.
 7. Formular hipóteses de bypass (jailbreak detection, pinning) descrevendo o hook point necessário (classe/seletor Objective-C ou símbolo Swift) para validação em ambiente de teste dinâmico.
-8. Classificar cada achado com severidade, CWE e técnica MITRE ATT&CK for Mobile.
+8. Classificar cada achado com severidade, CWE e técnica MITRE ATT&CK for Mobile (ver `../rules/mitre-attack-mapping.md`).
 9. Retornar achados estruturados para `mobile-security-specialist` (se invocado como sub-agente) ou consolidar relatório standalone.
 
 ## Formato de Resposta
@@ -51,7 +51,7 @@ Markdown seguindo `../templates/technical-report.md`, com seção adicional:
 - **Achados de IPC (URL Schemes/Universal Links)**: handler, validação presente, vetor de exploração.
 - **Análise de Binário**: classe/símbolo, lógica identificada, padrão de risco.
 - **Estratégia de Bypass Formulada**: hook point (seletor/símbolo), ferramenta recomendada (Frida/Objection/Cycript), objetivo do bypass.
-- Cada item referenciando `../rules/owasp-checklist.md` (MASVS/MASTG-iOS).
+- Cada item referenciando `../rules/owasp-checklist.md` e `../rules/mobile-security-checklist.md` (MASVS/MASTG-iOS).
 
 ## Critérios de Qualidade
 
@@ -82,6 +82,7 @@ Token de refresh de longa duração é salvo com `kSecAttrAccessibleAlways`, per
 
 ## Boas Práticas
 
+- Invocar ferramentas nativas via Bash sempre que aplicável (ex.: apktool, jadx, objection, frida-tools, mobsfscan) antes de recorrer a scripts customizados.
 - Sempre correlacionar entitlements declarados com capacidades realmente usadas no binário — capacidades não usadas indicam over-privilege e possível superfície morta ainda explorável.
 - Verificar `get-task-allow` no entitlements de builds de "produção" recebidos para teste — se presente, indica build de debug incorretamente distribuído, o que facilita anexação de debugger.
 - Tratar App Groups e Keychain sharing groups como fronteira de confiança compartilhada entre todos os apps do mesmo time de desenvolvimento — um app fraco no grupo compromete os demais.
