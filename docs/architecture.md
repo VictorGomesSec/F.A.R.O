@@ -11,7 +11,7 @@ faro/
   agents/       38 especialistas — "quem faz o trabalho"
   rules/        18 regras reutilizáveis — "o padrão contra o qual comparar"
   commands/     19 comandos — "como invocar um especialista/workflow"
-  workflows/    16 processos multi-agente — "a orquestração de ponta a ponta"
+  workflows/    18 processos multi-agente — "a orquestração de ponta a ponta"
   templates/    13 modelos de documento — "o formato da saída"
   examples/     9 cenários completos — "como isso se parece na prática"
   docs/         guias de uso e extensão do próprio framework

@@ -10,7 +10,7 @@ Não é um conjunto de prompts isolados — é um framework modular onde agentes
 F.A.R.O/
   agents/       38 especialistas de segurança
   commands/     19 comandos (/review, /web-pentest, /threat-model, ...)
-  workflows/    16 processos multi-agente de ponta a ponta
+  workflows/    18 processos multi-agente de ponta a ponta
   rules/        18 regras/checklists reutilizáveis (OWASP, MITRE ATT&CK, MASVS, CIS, CWE, NIST, CERT)
   templates/    13 modelos de documento de saída
   examples/     9 cenários completos de uso (Django, Spring Boot, Kubernetes, AD, ELF, malware, Node.js, .NET, Go)
